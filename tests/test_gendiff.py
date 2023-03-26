@@ -1,10 +1,10 @@
 from gendiff.scripts.gendiff import generate_diff
 
 
-first_json_file = 'tests/file1.json'
-second_json_file = 'tests/file2.json'
-empty_json_file = 'tests/file3.json'
-empty_file = 'tests/file4.json'
+first_json_file = 'tests/fixtures/file1.json'
+second_json_file = 'tests/fixtures/file2.json'
+empty_json_file = 'tests/fixtures/file3.json'
+empty_file = 'tests/fixtures/file4.json'
 
 
 def test_generate_diff():

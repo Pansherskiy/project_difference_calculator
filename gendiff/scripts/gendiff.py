@@ -12,7 +12,7 @@ def bool_lower(arg):
         return arg
 
 
-def generate_diff(first_file, second_file):
+def generate_diff_for_regular_json_files(first_file, second_file):
     result = '{'
     data1 = json.load(open(first_file))
     data2 = json.load(open(second_file))
@@ -29,6 +29,17 @@ def generate_diff(first_file, second_file):
             result += f'\n  + {key}: {bool_lower(data2[key])}'
     result += '\n}'
     return result
+
+
+def generate_diff(first_file, second_file):
+    text_file1 = open(first_file).read()
+    text_file2 = open(second_file).read()
+    if len(text_file1) == 0 or len(text_file2) == 0:
+        return 'There are no differences because one or both files are empty'
+    elif text_file1 == text_file2:
+        return 'The files are identical or you have specified the same file'
+    else:
+        return generate_diff_for_regular_json_files(first_file, second_file)
 
 
 def start_parser():

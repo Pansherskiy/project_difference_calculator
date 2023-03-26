@@ -5,7 +5,7 @@ reinstall:
 	pip install --user --force-reinstall dist/*.whl
 
 gend:
-	poetry run gendiff
+	poetry run gendiff -h
 
 build:
 	poetry build
@@ -18,3 +18,6 @@ package-install:
 
 lint:
 	poetry run flake8 gendiff
+
+test:
+	poetry run pytest

@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Евгений Прутян <buivan.proger@gmail.com>"]
 readme = "README.md"
-packages = [{ include = "gendiff"}]
+packages = [{ include = "difference_calculator"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -21,4 +21,4 @@ build-backend = "poetry.core.masonry.api"
 
 
 [tool.poetry.scripts]
-gendiff = "gendiff.scripts.gendiff:main"
+gendiff = "difference_calculator.scripts.gendiff:main"

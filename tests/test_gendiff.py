@@ -1,4 +1,4 @@
-from gendiff.scripts.gendiff import generate_diff
+from difference_calculator.gendiff import generate_diff
 
 
 first_json_file = 'tests/fixtures/file1.json'

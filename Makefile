@@ -10,8 +10,11 @@ gend:
 build:
 	poetry build
 
-coverage:
-	poetry run pytest --cov=project_difference_calculator
+test-coverage:
+	poetry run pytest --cov=difference_calculator --cov-report xml
+
+check:
+	poetry check
 
 publish:
 	poetry publish --dry-run

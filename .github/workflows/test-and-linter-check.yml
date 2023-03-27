@@ -13,8 +13,15 @@ jobs:
         run: pip install poetry
       - name: Install dependencies
         run: make install
-      - name: Tests
-        run: make test
       - name: Linter
         run: make lint
-
+      - name: Tests
+        run: make test
+      - name: Test coverage
+        uses: paambaati/codeclimate-action@v3.2.0
+        if: github.ref_name == 'main'
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        with:
+          coverageCommand: make test-coverage
+          debug: true

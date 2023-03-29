@@ -32,7 +32,7 @@ def json_file2():
 
 
 @pytest.fixture
-def json_empty_file():
+def empty_json_file():
     tmp_file_path = "test_file3.json"
     file = open(tmp_file_path, 'w')
     file.write('{}')

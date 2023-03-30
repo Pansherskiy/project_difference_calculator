@@ -4,7 +4,10 @@ install:
 reinstall:
 	pip install --user --force-reinstall dist/*.whl
 
-gend:
+gendiff:
+	poetry run gendiff tests/fixtures/json_file1.json tests/fixtures/json_file2.json
+
+help:
 	poetry run gendiff -h
 
 build:

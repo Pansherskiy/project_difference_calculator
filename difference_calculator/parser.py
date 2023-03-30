@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import json
 import yaml
 
 
@@ -11,11 +12,20 @@ def bool_lower(arg):
         return arg
 
 
-def gen_diff_for_regular_yaml_files(first_file_path, second_file_path):
-    with open(first_file_path) as file1:
-        data1 = yaml.safe_load(file1)
-    with open(second_file_path) as file2:
-        data2 = yaml.safe_load(file2)
+def data_unpacker(file_path):
+    if file_path.endswith('.json'):
+        with open(file_path) as json_file:
+            json_data = json.load(json_file)
+            return json_data
+    if file_path.endswith('.yaml') or file_path.endswith('.yml'):
+        with open(file_path) as yaml_file:
+            yaml_data = yaml.safe_load(yaml_file)
+            return yaml_data
+
+
+def gen_diff_for_non_empty_files(first_file_path, second_file_path):
+    data1 = data_unpacker(first_file_path)
+    data2 = data_unpacker(second_file_path)
     sorted_data_keys = sorted(data1.keys() | data2.keys())
     result = ''
     for key in sorted_data_keys:
@@ -31,7 +41,7 @@ def gen_diff_for_regular_yaml_files(first_file_path, second_file_path):
     return f'{{{result}\n}}'
 
 
-def yaml_generate_diff(first_file, second_file):
+def generate_diff(first_file, second_file):
     text_file1 = open(first_file).read()
     text_file2 = open(second_file).read()
     if len(text_file1) == 0 or len(text_file2) == 0:
@@ -39,4 +49,4 @@ def yaml_generate_diff(first_file, second_file):
     elif text_file1 == text_file2:
         return 'The files are identical or you have specified the same file'
     else:
-        return gen_diff_for_regular_yaml_files(first_file, second_file)
+        return gen_diff_for_non_empty_files(first_file, second_file)

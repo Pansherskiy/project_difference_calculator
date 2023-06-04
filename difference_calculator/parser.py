@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import argparse
-from difference_calculator.gendiff import generate_diff
 
 
 def start_parser():
@@ -8,8 +7,8 @@ def start_parser():
     Compares two configuration files and shows a difference.''')
     parser.add_argument('first_file')
     parser.add_argument('second_file')
-    parser.add_argument('-f', '--format', help='set format of output')
+    parser.add_argument('-f', '--format',
+                        help='set format of output',
+                        default='stylish')
     args = parser.parse_args()
-    first_arg = args.first_file
-    second_arg = args.second_file
-    print(generate_diff(first_arg, second_arg))
+    return args.first_file, args.second_file, args.format

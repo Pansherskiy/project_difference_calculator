@@ -1,8 +1,8 @@
 install:
 	poetry install
 
-upgrade:
-	poetry upgrade
+update:
+	poetry update
 
 reinstall:
 	pip install --user --force-reinstall dist/*.whl

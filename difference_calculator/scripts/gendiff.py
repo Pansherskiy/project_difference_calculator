@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from difference_calculator.gendiff import start_parser
+from difference_calculator.parser import start_parser
 
 
 def main():

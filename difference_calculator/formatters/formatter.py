@@ -1,5 +1,6 @@
 from difference_calculator.formatters.stylish import stylish
 from difference_calculator.formatters.plain import plain
+from difference_calculator.formatters.json import json
 
 
 def formatter(diff, style):
@@ -8,6 +9,8 @@ def formatter(diff, style):
             return stylish(diff)
         case 'plain':
             return plain(diff)
+        case 'json':
+            return json(diff)
         case _:
             print(f"Format '{style}' missing, choose among formats:"
                   f"\n'stylish'\n'plain'\n'json'")

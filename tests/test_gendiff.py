@@ -92,3 +92,13 @@ def test_generate_diff_plain_format(
     assert generate_diff(nested_yaml_file1, nested_yaml_file2, 'plain') == plain_result1
     assert generate_diff(nested_json_file2, nested_json_file1, 'plain') == plain_result2
     assert generate_diff(nested_yaml_file2, nested_yaml_file1, 'plain') == plain_result2
+
+
+def test_generate_diff_json_format(
+        nested_json_file1,
+        nested_json_file2,
+        json_result1,
+        json_result2,
+):
+    assert generate_diff(nested_json_file1, nested_json_file2, 'json') == json_result1
+    assert generate_diff(nested_json_file2, nested_json_file1, 'json') == json_result2

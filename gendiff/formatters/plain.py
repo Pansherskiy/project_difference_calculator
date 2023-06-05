@@ -1,4 +1,4 @@
-from difference_calculator.formatters.stylish import bool_lower
+from gendiff.formatters.stylish import bool_lower
 
 
 def plain(diff, path_string=''):

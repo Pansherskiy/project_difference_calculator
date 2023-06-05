@@ -2,7 +2,7 @@
 import json
 import yaml
 import os
-from difference_calculator.formatters.formatter import formatter
+from gendiff.formatters.formatter import formatter
 
 
 def generate_diff(first_file, second_file, style='stylish'):

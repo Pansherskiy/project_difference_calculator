@@ -1,6 +1,6 @@
 from tests.fixtures.json_fixture import * # noqa
 from tests.fixtures.yaml_fixture import * # noqa
-from difference_calculator.gendiff import generate_diff
+from gendiff.gendiff import generate_diff
 
 
 def test_generate_diff_for_empty_files(

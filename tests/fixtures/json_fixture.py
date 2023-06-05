@@ -215,7 +215,7 @@ def nested_json_result1():
         }
         fee: 100500
     }
-}'''
+}'''    # noqa W291
 
 
 @pytest.fixture
@@ -263,7 +263,7 @@ def nested_json_result2():
         }
         fee: 100500
     }
-}'''
+}'''    # noqa W291
 
 
 @pytest.fixture

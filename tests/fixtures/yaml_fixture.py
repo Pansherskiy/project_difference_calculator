@@ -164,7 +164,7 @@ def nested_yaml_result1():
         }
         fee: 100500
     }
-}'''
+}'''    # noqa W291
 
 
 @pytest.fixture
@@ -212,4 +212,4 @@ def nested_yaml_result2():
         }
         fee: 100500
     }
-}'''
+}'''    # noqa W291

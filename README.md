@@ -1,27 +1,23 @@
-<h2 align='center'>Difference generator</h2>
+<h2>Difference generator</h2>
+<h3>Hexlet tests and linter status:</h3>
 
----
+<a href="https://github.com/Pansherskiy/project_difference_generator/actions/workflows/hexlet-check.yml"><img src="https://github.com/Pansherskiy/project_difference_generator/actions/workflows/hexlet-check.yml/badge.svg" alt="Actions Status"></a>
+<a href="https://github.com/Pansherskiy/project_difference_generator/actions/workflows/test-and-linter-check.yml"><img src="https://github.com/Pansherskiy/project_difference_generator/actions/workflows/test-and-linter-check.yml/badge.svg" alt="test-and-linter-check"></a>
 
-<h3 align='center'>Hexlet tests and linter status:</h3>
-<div style="text-align:center">
-    <a href="https://github.com/Pansherskiy/project_difference_generator/actions/workflows/hexlet-check.yml"><img src="https://github.com/Pansherskiy/project_difference_generator/actions/workflows/hexlet-check.yml/badge.svg" alt="Actions Status"></a>
-    <a href="https://github.com/Pansherskiy/project_difference_generator/actions/workflows/test-and-linter-check.yml"><img src="https://github.com/Pansherskiy/project_difference_generator/actions/workflows/test-and-linter-check.yml/badge.svg" alt="test-and-linter-check"></a>
-</div>
-<h3 align='center'>Сode quality and test coverage</h3>
-<div style="text-align:center">
-    <a href="https://codeclimate.com/github/Pansherskiy/project_difference_generator/maintainability"><img src="https://api.codeclimate.com/v1/badges/14c1326419db56c39355/maintainability" /></a>
-    <a href="https://codeclimate.com/github/Pansherskiy/project_difference_generator/test_coverage"><img src="https://api.codeclimate.com/v1/badges/14c1326419db56c39355/test_coverage" /></a>
-</div>
+<h3>Сode quality and test coverage</h3>
 
-<h3 align='center'>Used technologies</h3>
+<a href="https://codeclimate.com/github/Pansherskiy/project_difference_generator/maintainability"><img src="https://api.codeclimate.com/v1/badges/14c1326419db56c39355/maintainability" /></a>
+<a href="https://codeclimate.com/github/Pansherskiy/project_difference_generator/test_coverage"><img src="https://api.codeclimate.com/v1/badges/14c1326419db56c39355/test_coverage" /></a>
 
-<div style="text-align:center">
+<h3>Used technologies</h3>
+
+<div>
     <img src="https://img.shields.io/badge/Python-v3.10-blue?style=plastic&logo=python" alt="Python v3.10">
     <img src="https://img.shields.io/badge/flake8-v6.0.0-green?style=plastic&logo=flake8" alt="flake8 v6.0.0">
     <img src="https://img.shields.io/badge/Pyyaml-v6.0-blue?style=plastic&logo=Python" alt="Pyyaml v6.0">
 </div>
 
-<div style="text-align:center">
+<div>
     <img src="https://img.shields.io/badge/Poetry-v1.3.2-blue?style=plastic&logo=poetry" alt="Poetry v1.3.2">
     <img src="https://img.shields.io/badge/Git-v2.34.1-red?style=plastic&logo=Git" alt="Git v2.34.1">
     <img src="https://img.shields.io/badge/Pytest-v7.3.1-blue?style=plastic&logo=Pytest" alt="Pytest v7.3.1">
@@ -29,15 +25,16 @@
 
 
 ---
+<h3>Description</h3>
 
 Difference generator is a program that determines the 
 difference between two JSON or YAML files. The input formats are
 `.json`, `.yaml` or `.yml`, as a result of the program, you can get
-differences in three formats: `stylish`(default), `plain`, `json`.
+differences in three formats: `stylish(default)`, `plain`, `json`.
 
 ---
 
-<h3 align='center'>Installing</h3>
+<h3>Installing</h3>
 1. Сlone the project to your local repository
 
 `git clone git@github.com:Pansherskiy/project_difference_generator.git`
@@ -52,7 +49,7 @@ Now the program is ready to use
 
 ---
 
-<h3 align='center'>Usage</h3>
+<h3>Usage</h3>
 
 Command `gendiff -h`
 ```commandline
@@ -72,7 +69,7 @@ options:
 
 ---
 
-<h3 align='center'>Examples</h3>
+<h3>Examples</h3>
 
 * Comparing JSON files:
 [![asciicast](https://asciinema.org/a/589790.svg)](https://asciinema.org/a/589790)

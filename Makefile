@@ -35,7 +35,7 @@ lint:
 	poetry run flake8 difference_calculator
 
 test:
-	poetry run pytest
+	poetry run pytest -vv --color=yes --exitfirst tests
 
 test-coverage:
 	poetry run pytest --cov=difference_calculator --cov-report xml
